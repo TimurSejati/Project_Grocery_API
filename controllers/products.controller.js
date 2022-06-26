@@ -41,7 +41,8 @@ exports.findAll = (req, res, next) => {
 		productName: req.query.productName,
 		categoryId: req.query.categoryId,
 		pageSize: req.query.pageSize,
-		page: req.query.page
+		page: req.query.page,
+		sort: req.query.sort
 	};
 
 	productService.getProducts(model, (error, results) => {
@@ -89,7 +90,7 @@ exports.update = (req, res, next) => {
 				productShortDescription: req.body.productShortDescription,
 				productDescription: req.body.productDescription,
 				productPrice: req.body.productPrice,
-				productSalesPrice: req.body.productSalesPrice,
+				productSalePrice: req.body.productSalePrice,
 				productSKU: req.body.productSKU,
 				productType: req.body.productType,
 				stockStatus: req.body.stockStatus,
