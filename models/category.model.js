@@ -19,11 +19,12 @@ const category = mongoose.model(
 		},
 		{
 			toJSON: {
-				transform: function (doc, ret) {
-					ret.categoryId = ret._id.toString();
-					delete ret._id;
-					delete ret._v;
-				}
+				// transform: function (doc, ret) {
+				// 	ret.categoryId = ret._id.toString();
+				// 	delete ret._id;
+				// 	delete ret.__v;
+				// }
+
 			}
 		}
 	)
